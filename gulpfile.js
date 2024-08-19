@@ -40,10 +40,10 @@ function serve() {
 }
 
 // buildタスクの定義
-export function build() {
+export function build(done) {
   return gulp.series(
     gulp.parallel(compileSass, compressJs)
-  );
+  )(done); // 非同期完了を示す
 }
 
 // デフォルトタスク
