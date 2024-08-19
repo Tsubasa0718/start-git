@@ -39,8 +39,15 @@ function serve() {
   gulp.watch('dist/*.html').on('change', browserSync.reload);
 }
 
+// buildタスクの定義
+export function build() {
+  return gulp.series(
+    gulp.parallel(compileSass, compressJs)
+  );
+}
+
 // デフォルトタスク
 export default gulp.series(
-  gulp.parallel(compileSass, compressJs),
+  build,
   serve
 );
