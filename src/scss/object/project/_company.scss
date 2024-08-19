@@ -1,0 +1,90 @@
+@use"../../foundation/_mixin.scss" as *;
+
+.p-company{
+    &__info{
+     margin-top: rclamp(60, 60, 375,1440);   
+    }
+    &__table{
+        width: 100%;
+        font-size: rclamp(14,15,375,1440); 
+        border-collapse: collapse;
+        border-spacing: 0;
+        @include responsive(md){
+            line-height: 1.5;
+        }  
+        tbody{
+            tr{
+                border-bottom: solid 1px #ddd;     
+            }
+            
+            th,
+            td{
+              text-align: left;
+              padding: 1.875rem;
+              line-height: 1.15;
+              letter-spacing: .05em;
+              @include responsive(md){
+                padding: 1.25rem 0 1.25rem 0;
+              }
+            }
+            
+            th{
+              width: 18.8%;
+            }
+            
+          }
+    }
+    &__map{
+     margin-top: 3.125rem;
+     iframe{
+        width: 100%;
+        height: rclamp(300,400,375,1440);
+     }
+     &__link{
+        margin: rclamp(19, 20, 375, 1440) 9.5px 0 0;
+        display: flex;
+        justify-content: flex-end;
+        a{
+         font-size: rclamp(12,15,375,1440);
+         font-weight: 500;
+         line-height: 1.15;
+         color: var(--color-link);
+         border-bottom: 1px solid var(--color-link);
+        }
+     }
+    }
+    &__list{
+     margin-top: rclamp(50,80,375,1440);   
+    }
+    &__item{
+        margin-bottom: 0.9375rem;
+        padding-bottom: 0.9375rem;
+        border-bottom: 1px solid #E8E8E8;
+    }
+    &__link{
+        display: flex;
+        @include responsive(md){
+         flex-direction: column;
+        }
+        &:hover{
+            color: var(--color-main);
+        }
+    }
+    &__datetime,
+    &__title{
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.8;
+        @include responsive(md){
+            line-height: 1.6;
+        }
+    }
+    &__title{
+        margin-left: 1.25rem;
+        white-space: nowrap;
+        @include responsive(md){
+            white-space: wrap;
+            margin-left: 0;
+        }
+    }
+}

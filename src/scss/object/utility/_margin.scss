@@ -1,0 +1,22 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.u-subtitle-mg{
+    margin:0.0625rem 0 0 1.625rem;
+    @include responsive (md){
+    margin: 0;
+    }
+}
+
+.u-news__list-mg{
+    margin-left: 2.1875rem;
+    @include responsive(md){
+     margin-left: 0;
+    }
+}
+
+.p-subheader__title-mg{
+    margin: 10px 0 0 5px; 
+    @include responsive(md){
+        margin: 0;
+    }
+}

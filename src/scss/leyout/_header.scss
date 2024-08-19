@@ -1,0 +1,58 @@
+@use "../foundation/_mixin.scss" as *;
+
+.l-header{
+   position: relative;
+    height: 90px;
+    padding: 0  rclamp(20, 70, 375, 1440);
+    @include responsive(md){
+    height: 60px;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ .nav {
+    transition: all .3s;
+   @include responsive (md){
+         position: fixed;
+         top: 0;
+         right: 0;
+         z-index: 1;
+         width: 175px;
+         transform: translateX(200px);
+         padding: 5.625rem 0 0 3.125rem;
+         background-color: var(--color-main);
+         height: 100%;
+         color: #fff;
+   }
+    &__list{
+      display: flex;
+   @include responsive (md){
+      flex-direction: column;
+      }
+    }
+    &__item:not(:first-of-type){
+     margin-left: 1.875rem;
+     @include responsive(md){
+      margin: 1.5625rem 0 0 0;
+     }
+    }
+    &__link{
+        font-weight: bold;
+        transition: all .3s;
+        letter-spacing: .05em;
+     &:hover{
+        color: var(--color-main);
+     }
+    }
+}
+.nav.active {
+transform: translateX(0);
+}
+}
+.active__link{
+   color: var(--color-main);
+   @include responsive(md){
+    color: #fff;
+    opacity: .3;
+   }
+ }

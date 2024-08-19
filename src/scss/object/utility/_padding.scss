@@ -1,0 +1,8 @@
+@use "../../foundation/_mixin.scss" as *;
+// 調整
+.u-news__title-pd {
+  padding-left: 19px;
+  @include responsive(md){
+    padding-left: 0;
+  }
+}

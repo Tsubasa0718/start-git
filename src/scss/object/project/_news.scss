@@ -1,0 +1,49 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-news{
+    margin-top: rclamp(40, 60, 375, 1440);
+ &__body{
+    display: flex;
+    column-gap: 5.625rem;
+    @include responsive(md){
+        flex-direction: column;
+    }
+ }
+&__list{
+    @include responsive(md){
+        margin-top: 1.25rem;
+    }
+}
+
+ &__item{
+  border-bottom: 1px solid #E8E8E8;
+  padding-bottom: 0.9375rem;
+  margin-bottom: 0.9375rem;
+ }
+
+ &__link{
+    display: flex;
+    @include responsive(md){
+        flex-direction: column;
+    }
+    font-size: 0.9375rem;
+    font-weight: 500;
+    @include responsive(md){
+        font-weight: 400;
+    }
+    &:hover{
+        color: var(--color-main);
+    }
+}
+&__datetime{
+    line-height: 1.8;
+}
+&__title{
+    margin-left: 1.25rem;
+    line-height: 1.8;
+    @include responsive(md){
+    margin-left: 0;
+    }
+}
+ 
+}

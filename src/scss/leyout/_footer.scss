@@ -1,0 +1,26 @@
+@use"../foundation/_mixin.scss" as *;
+
+.l-footer{
+    margin-top: rclamp(60, 100, 375, 1440);
+    background-color: var(--color-main);
+    padding: rclamp(42, 60, 375, 1440) rclamp(32, 50, 375, 1440);
+    color: #fff;
+ &__list{
+  display: flex;
+ }
+ &__item{
+    font-size: rclamp(12, 14, 375, 1440);
+    letter-spacing: .05em;
+ }
+ &__item:not(:first-of-type){
+   margin-left: rclamp(24, 30, 375, 1440);
+ }
+ &__copy{
+    margin-top: 0.8125rem; 
+    line-height: 1.15;
+    letter-spacing: .03em;
+ }
+ &__link{
+   margin-top: 1.25rem;
+ }
+}

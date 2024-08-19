@@ -1,0 +1,19 @@
+@use"../../foundation/_mixin.scss" as *;
+
+.p-subheader{
+ height: rclamp(160, 190, 375, 1440);
+ background-image: url(/images/pc_header.jpg);
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ &__title{
+    color: #fff;
+    font-size: rclamp(28, 40, 375, 1440);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+ }
+}

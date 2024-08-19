@@ -1,0 +1,29 @@
+@use "../../foundation/_mixin.scss" as *;
+.p-mv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: rclamp(460,600,375,1440);
+    background-image: url(/images/pc_bg_mv.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+    &__title{
+       
+        color: white;
+        font-size: rclamp(80, 160, 375, 1440);
+        font-weight: bold;
+        text-shadow: 0 4px 6px rgb(0 0 0 / 25%);
+        line-height: 1;
+        margin-bottom: 0.625rem;
+    }
+    &__subtitle{
+        font-size: rclamp(20, 24, 375, 1440);
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #fff;
+    }
+}                                                                        

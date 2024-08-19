@@ -1,0 +1,62 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-service{
+    margin-top: rclamp(40, 80, 375, 1440);
+
+  &__heading{
+    position: relative;
+    margin-bottom: 45px;
+    @include responsive(md){
+     margin-bottom: 1.25rem;
+    }
+    &::before{
+    display: block;
+    content: "SERVICE";
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    z-index: -1;
+    font-size: rclamp(70, 168, 375, 1440);
+    font-weight: bold;
+    line-height: 1;
+    color: #f2f2f2;
+    @include responsive(md){
+        top: -2px;
+        right: -30px;
+    }
+    }
+  }
+  &__body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.875rem;
+    @include responsive(md){
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 1.25rem;
+    }
+  }
+ &__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 3px 21px 0 rgba(0, 0, 0, 0.16);
+    padding: 3.125rem;
+ }
+ &__figure{
+    text-align: center;
+ }
+ &__caption{
+    margin-top: 10px;
+    font-size: rclamp(16, 18, 375, 1440);
+    font-weight: bold;
+    line-height: 1.15;
+ }
+ &__text{
+    margin-top: rclamp(10, 15, 375, 1440);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.7;
+ }
+}
