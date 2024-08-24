@@ -42,12 +42,9 @@
       font-weight: 500;
       line-height: 1.7;
       width: 60%;
-      p:nth-child(2){
-       margin-right: 100px;
-      }
-      @include responsive(md){
+     @include responsive(md){
         margin-top: 1.25rem;
-        width: none;
+        width: 100%;
       }
      }
      
