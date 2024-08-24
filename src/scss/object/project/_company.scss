@@ -21,6 +21,7 @@
             td{
               text-align: left;
               padding: 1.875rem;
+              font-size: 0.875rem;
               line-height: 1.15;
               letter-spacing: .05em;
               @include responsive(md){
@@ -30,6 +31,9 @@
             
             th{
               width: 18.8%;
+              @include responsive(md){
+                width: 100px;
+              }
             }
             
           }
