@@ -4,13 +4,13 @@ const Nav = document.querySelector('.nav');
 const NavLinks = document.querySelectorAll('.nav__link');
 
 MenuBtn.addEventListener('click', () => {
-      
+
     MenuBtn.classList.toggle('active');
     Nav.classList.toggle('active');
     const isActive = Nav.classList.contains('active');
-    
-    NavItems.forEach(item => {
-        item.setAttribute('tabindex', isActive ? '0' : '-1');
+
+    NavLinks.forEach(link => {
+        link.setAttribute('tabindex', isActive ? '0' : '-1');
     });
 });
 // ハンバーガーメニュー
